@@ -8,11 +8,11 @@ import lombok.Setter;
 /**
  * 
  * @类描述：lombok 使用说明
- * @项目名称：com.wangxuegang.pachong
- * @包名�? com.wangxuegang.lombok
- * @类名称：lombokTest
+ * @项目名称：com.wangxuegang
+ * @包名： com.wangxuegang.lombok
+ * @类名称：LombokTest
  * @创建人：wangxuegang
- * @创建时间�?2018�?12�?21日下�?1:44:07
+ * @创建时间：2018年12月21日下午5:38:33
  * @mail 15510235102@163.com
  * @version v1.0
  */
