@@ -1,12 +1,14 @@
+package com.wangxuegang.thread;
+
 /**
- *  @author buyu
+ *  @author wangxuegang
  *  1.synchronizecd使用
  *  2.static和synchronizecd同时使用
  *  3.wait()使用
  *  4.notify()使用
  *  5.clone()使用	
  */
-public class MyThread implements Cloneable{
+public class ThreadDemo implements Cloneable{
 	
 	/*MyThread m ;
 	
@@ -105,7 +107,6 @@ public class MyThread implements Cloneable{
      
 		final Object lock = new Object();
 		new Thread(new Runnable() {
-			@Override
 			public void run() {
 				synchronized (lock) {
 					for (int i = 1000; i > 0; i--) {
@@ -125,7 +126,6 @@ public class MyThread implements Cloneable{
 			}
 		},"t1").start();
 		new Thread(new Runnable() {
-			@Override
 			public void run() {
 				synchronized (lock) {
 					System.out.println(Thread.currentThread().getName()+"==="+count);

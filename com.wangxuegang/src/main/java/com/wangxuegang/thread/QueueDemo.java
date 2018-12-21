@@ -1,13 +1,21 @@
+package com.wangxuegang.thread;
+
 
 import java.util.LinkedList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 模拟Queue(队列)
- * @author buyu
- *
+ * 
+ * @类描述：模拟Queue(队列)
+ * @项目名称：com.wangxuegang
+ * @包名： com.wangxuegang.thread
+ * @类名称：QueueDemo
+ * @创建人：wangxuegang
+ * @创建时间：2018年12月21日下午4:58:35
+ * @mail 15510235102@163.com
+ * @version v1.0
  */
-public class MyQueue {
+public class QueueDemo {
 	
 	//创建一个链表集合
 	private final LinkedList<Object> list = new LinkedList<Object>();
@@ -25,7 +33,7 @@ public class MyQueue {
 	private final Object lock = new Object();
 	
 	//构造方法
-	public MyQueue (int maxSize){
+	public QueueDemo (int maxSize){
 		this.maxSize = maxSize;
 	}
 	
@@ -87,7 +95,7 @@ public class MyQueue {
 	
 	public static void main(String[] args) throws Exception {
 		
-		final MyQueue m = new MyQueue(5);
+		final QueueDemo m = new QueueDemo(5);
 		m.put("a");
 		m.put("b");
 		m.put("c");
@@ -95,7 +103,6 @@ public class MyQueue {
 		m.put("e");
 		System.out.println("当前元素个数：" + m.size());
 		Thread t1 = new Thread(new Runnable() {
-			@Override
 			public void run() {
 				m.put("h");
 				m.put("i");
@@ -103,7 +110,6 @@ public class MyQueue {
 		}, "t1");
 		
 		Thread t2 = new Thread(new Runnable() {
-			@Override
 			public void run() {
 				try {
 					Thread.sleep(1000);
